@@ -1,0 +1,83 @@
+<div class="modal-header">
+        <h3 class="modal-title text-center" id="modal-title" style="color:#2da17c;font-size:25px;">Book Appointments</h3>
+
+        <span  type="reset" class="glyphicon glyphicon-remove" ng-click="close()" style="font-size:20px;float:right; color:#2da17c;"/>
+</div>
+<div class="modal-body" id="modal-body" >
+           
+          
+        <div class="row "  ng-show="mainDiv">
+
+                    <form role="form"  name="userForm" ng-submit="sendotp(userForm.$valid)"  novalidate class="col-md-11 go-right" ng-show="!sendotpverify" >
+                       <span style="color:#2da17c;font-size:20px; font-weight:50px; border-bottom:3px solid #2da17c;">Register</span>
+
+
+                       <br><br>
+                        <div class="form-group">
+                        <input id="name" name="name" ng-model="patientProfileRegistration.name" type="text" class="form-control" required >
+                        <label for="name">Your Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input id="phone" name="phone" ng-model="patientProfileRegistration.mobileNumber" type="tel" class="form-control" required>
+                            <label for="phone">mobile-no</label>
+                        </div>
+                        <div class="form-group">
+                            <input id="email" name="email" type="email" ng-model="patientProfileRegistration.email" class="form-control">
+                            <label for="email">email</label>
+                        </div>
+                        <div class="form-group">
+                            <input id="age" name="Age" ng-model="patientProfileRegistration.age" type="number" class="form-control" >
+                            <label for="age">Age</label>
+                        </div>
+                   
+                    
+                
+      
+                        <div >
+                            <input type="submit" class="btn btn-primary save-changes" ng-disabled="userForm.$invalid" value="Submit"/ >
+                            
+                        </div>
+                    </form>
+
+                   <!-- <loading style="margin-left:35%; "></loading>-->
+                    <form name="formOtp" ng-submit="otpverify(formOtp.$valid)" ng-show="sendotpverify" class="col-md-11 go-right">
+                        <div class="form-group">
+                            <input id="age" name="Enter Your Otp" ng-model="otp" type="otp" class="form-control" required>
+
+                            <label for="age">Verify Otp</label>
+
+                        </div>
+                        <div >
+                            <input type="submit" class="btn btn-primary save-changes" ng-disabled="userForm.$invalid" value="Submit"/>
+                            
+                        </div>
+                        
+                    </form>
+
+            </div>
+            <div class="row" ng-show="mainDiv">
+                    <form name="Registrationpateint" class="col-md-12 " ng-show="pateintProfile"  ng-submit="pateintRegistration(Registrationpateint.$valid)">
+                        <div class="form-group col-md-10 col-md-offset-2 col-lg-10 col-lg-offset-2  tex-center" style="font-size:18px;color: #737373"  >
+
+                            <img  src="./images/done-icon.png" class="img-responsive">
+
+                            <p style="font-size:20px;color:#2da17c;">Appointment Scheduled  Successfully Booked</p> 
+                                   Appointment Doctor - {{Registration.DoctorName}}<br>
+                                   Clinic Name - {{Registration.ClinicNAme}}<br>
+                                   Appointment Date : {{Registration.date}}<br>
+                                   Appointment Time : {{Registration.slotStartTime |date:'shortTime' :'':'+0530'}}
+                                   
+
+
+
+                        </div>
+                        <div >
+                            <input type="submit" class="btn save-changes" ng-disabled="userFouserFormrm.$invalid" value="ok"/ >
+                            
+                        </div>
+                    </form>
+
+
+
+            </div>                
+</div>

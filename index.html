@@ -1,0 +1,78 @@
+<!doctype html>
+<html ng-app="qorql_app">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">    
+    	<link rel="stylesheet" href="./node_modules/font-awesome-4.7.0/css/font-awesome.min.css">
+    
+    	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		
+  
+
+		<link rel="stylesheet" type="text/css" href="style.css">
+
+		
+	</head>
+	<body ng-controller="MainController">
+		
+		<nav class="navbar navbar-fixed-top" >
+			<div class="container" id="header">
+				<!-- Brand and toggle get grouped for better mobicle display -->
+				
+					
+					<a class="navbar-brand" href="#">
+						<img alt="Brand" class="img-responsive" src="./images/logo.png">
+					</a>
+			</div>	
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<!-- /.container-fluid -->
+		</nav>
+			
+			<div ng-view></div>
+			
+			<!-- .................................footer............................. -->
+			<footer  id="footer">
+
+				
+					<div class="row" style="padding-top:1%;">
+				         <div class="col-lg-offset-1 col-lg-2 " >
+				         	
+				         		<a href="#">Book Online appointment</a>
+									
+								
+						</div>
+						<div class="col-lg-offset-7 col-lg-2 " >
+							<a href="#" ><img src="./images/google-play.png"></a>
+						</div>
+							
+					</div>
+					
+					
+			    
+			        <div style="border-top: 1px solid #D4D0D0;">
+
+				        <p class="text-center" style="font-size: 11px ;">	
+							Copyright &copy; 2016 QORQL Pvt. Ltd. All Rights Reserved.	
+						</p>
+      				</div>
+      			
+			</footer>
+			<!--..............................footer end...................................-->
+	</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+	<script src="./node_modules/angular-route/angular-route.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-sanitize.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.3.2.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-cookies.min.js"></script>
+	<script src="./node_modules/angular-ui-notification/dist/angular-ui-notification.min.js"></script>
+	<script src="./node_modules/moment/min/moment.min.js"></script>
+	
+	<script src="app.js"></script>
+	      
+ 
+            
+</html>
